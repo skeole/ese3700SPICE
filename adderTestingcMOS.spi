@@ -147,16 +147,16 @@ XcMOSNorm@9 cMOSNorm@9_!cnext clast gnd gnd cMOSNorm@9_z ese370__cMOSNormal
 XcMOSNorm@10 net@310 gnd gnd gnd cMOSNorm@10_z ese370__cMOSNormal
 .END
 
-*** source adderTestingcMOS.spi <-- open circuit in ngspice
-*** tran 1ps 2ns <-- runs the analysis for the pulse
-*** set color0 = white color1 = black color2 = red color3 = blue <-- make the graph prettier
+*** make the graph prettier
+*** set color0 = white color1 = black color2 = red color3 = blue
 
-*** plot xin y1 x0 <-- input1, input2, and output
+*** delay cascade
+*** source adderTestingSized.spi ; tran 1ps 2ns ; plot xin c1 c2 c3 c4 c5 c6 c7 clast
+*** z cascade
+*** source adderTestingSized.spi ; tran 1ps 2ns ; plot xin zlast
 
-*** plot xin c1 c2 c3 c4 c5 c6 c7 clast
-*** plot xin zlast <-- input1, input2, and output
+*** switching energy
+*** source adderTestingSized.spi ; tran 1ps 2ns; meas tran energy INTEG i(vv_generi@1) FROM=500p TO=1000p ; meas tran energy INTEG i(vv_generi@1) FROM=1000p TO=1500p
 
-*** meas tran energy INTEG i(vv_generi@1) FROM=500p TO=1000p
-*** meas tran energy INTEG i(vv_generi@1) FROM=1000p TO=1500p
-
-*** meas tran energy INTEG i(vv_generi@1) FROM=500p TO=666.901p
+*** static energy
+*** source adderTestingSized.spi ; tran 1ps 2ns; meas tran energy INTEG i(vv_generi@1) FROM=500p TO=661.2675p
