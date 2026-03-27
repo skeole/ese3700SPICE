@@ -99,29 +99,29 @@ Mpmos@55 vdd net@693 z vdd P L=0.022U W=0.022U
 
 *** delay
 *** VVPulse@2 x0 gnd pulse (0 0.0V 0ns 0ps 0ps 4ns 4ns) DC 0V AC 0V 0
-*** VVPulse@3 y1 gnd pulse (0 0.8V 0ns 0ps 0ps 4ns 4ns) DC 0V AC 0V 0
-*** VVPulse@4 xin gnd pulse (0 0.8V 0ns 5ps 5ps 500ps 1ns) DC 0V AC 0V 0
+*** VVPulse@3 y1 gnd pulse (0 1.0V 0ns 0ps 0ps 4ns 4ns) DC 0V AC 0V 0
+*** VVPulse@4 xin gnd pulse (0 1.0V 0ns 5ps 5ps 500ps 1ns) DC 0V AC 0V 0
 
 *** switching energy - full
-*** VVPulse@2 x0 gnd pulse (0 0.8V 0ns 5ps 5ps 500ps 1ns) DC 0V AC 0V 0
-*** VVPulse@3 y1 gnd pulse (0 0.8V 0ns 5ps 5ps 500ps 1ns) DC 0V AC 0V 0
-*** VVPulse@4 xin gnd pulse (0 0.8V 0ns 5ps 5ps 500ps 1ns) DC 0V AC 0V 0
+*** VVPulse@2 x0 gnd pulse (0 1.0V 0ns 5ps 5ps 500ps 1ns) DC 0V AC 0V 0
+*** VVPulse@3 y1 gnd pulse (0 1.0V 0ns 5ps 5ps 500ps 1ns) DC 0V AC 0V 0
+*** VVPulse@4 xin gnd pulse (0 1.0V 0ns 5ps 5ps 500ps 1ns) DC 0V AC 0V 0
 
 *** switching energy - half
-*** VVPulse@2 x0 gnd pulse (0 0.8V 0ns 5ps 5ps 500ps 1ns) DC 0V AC 0V 0
+*** VVPulse@2 x0 gnd pulse (0 1.0V 0ns 5ps 5ps 500ps 1ns) DC 0V AC 0V 0
 *** VVPulse@3 y1 gnd pulse (0 0.0V 0ns 5ps 5ps 500ps 1ns) DC 0V AC 0V 0
-*** VVPulse@4 xin gnd pulse (0 0.8V 0ns 5ps 5ps 500ps 1ns) DC 0V AC 0V 0
+*** VVPulse@4 xin gnd pulse (0 1.0V 0ns 5ps 5ps 500ps 1ns) DC 0V AC 0V 0
 
 *** leakage - worst
 *** VVPulse@2 x0 gnd pulse (0 0.0V 0ns 0ps 0ps 4ns 4ns) DC 0V AC 0V 0
-*** VVPulse@3 y1 gnd pulse (0 0.8V 0ns 0ps 0ps 4ns 4ns) DC 0V AC 0V 0
+*** VVPulse@3 y1 gnd pulse (0 1.0V 0ns 0ps 0ps 4ns 4ns) DC 0V AC 0V 0
 *** VVPulse@4 xin gnd pulse (0 0.0V 0ns 0ps 0ps 4ns 4ns) DC 0V AC 0V 0
 
 *** leakage - best
 VVPulse@2 evens gnd pulse (0 0.0V 0ns 0ps 0ps 4ns 4ns) DC 0V AC 0V 0
-VVPulse@3 evens gnd pulse (0 0.8V 0ns 0ps 0ps 4ns 4ns) DC 0V AC 0V 0
+VVPulse@3 odds gnd pulse (0 1.0V 0ns 0ps 0ps 4ns 4ns) DC 0V AC 0V 0
 
-VV_Generi@1 vdd gnd DC 0.8 AC 0
+VV_Generi@1 vdd gnd DC 1.0 AC 0
 
 *** everything besides best-case leakage
 *** XcMOSNega@2 c1 c2 x0 y1 cMOSNega@2_z ese370__cMOSNegatedSized
