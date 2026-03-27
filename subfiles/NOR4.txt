@@ -1,0 +1,18 @@
+.SUBCKT NOR4 x1 x2 x3 x4 y
++ PARAMS: nwidth=1 pwidth=1
+
+.param wn = {nwidth * 0.022u} wp = {pwidth * 0.022u}
+
+Mpmos@1 vdd x1 net@1 vdd P L=0.022U W={wp}
+Mpmos@2 net@1 x2 net@2 vdd P L=0.022U W={wp}
+Mpmos@3 net@2 x3 net@3 vdd P L=0.022U W={wp}
+Mpmos@4 net@3 x4 y vdd P L=0.022U W={wp}
+
+Mnmos@1 y x1 gnd gnd N L=0.022U W={wn}
+Mnmos@2 y x2 gnd gnd N L=0.022U W={wn}
+Mnmos@3 y x3 gnd gnd N L=0.022U W={wn}
+Mnmos@4 y x4 gnd gnd N L=0.022U W={wn}
+.ENDS NOR4
+
+** example: XNOR4@1 net@1 net@2 net@3 net@4 XNOR4@1_y NOR4
++ PARAMS: nwidth=1 pwidth=1

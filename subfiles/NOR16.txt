@@ -1,0 +1,42 @@
+.SUBCKT NOR16 x1 x2 x3 x4 x5 x6 x7 x8 x9 x10 x11 x12 x13 x14 x15 x16 y
++ PARAMS: nwidth=1 pwidth=1
+
+.param wn = {nwidth * 0.022u} wp = {pwidth * 0.022u}
+
+Mpmos@1 vdd x1 net@1 vdd P L=0.022U W={wp}
+Mpmos@2 net@1 x2 net@2 vdd P L=0.022U W={wp}
+Mpmos@3 net@2 x3 net@3 vdd P L=0.022U W={wp}
+Mpmos@4 net@3 x4 net@4 vdd P L=0.022U W={wp}
+Mpmos@5 net@4 x5 net@5 vdd P L=0.022U W={wp}
+Mpmos@6 net@5 x6 net@6 vdd P L=0.022U W={wp}
+Mpmos@7 net@6 x7 net@7 vdd P L=0.022U W={wp}
+Mpmos@8 net@7 x8 net@8 vdd P L=0.022U W={wp}
+Mpmos@9 net@8 x9 net@9 vdd P L=0.022U W={wp}
+Mpmos@10 net@9 x10 net@10 vdd P L=0.022U W={wp}
+Mpmos@11 net@10 x11 net@11 vdd P L=0.022U W={wp}
+Mpmos@12 net@11 x12 net@12 vdd P L=0.022U W={wp}
+Mpmos@13 net@12 x13 net@13 vdd P L=0.022U W={wp}
+Mpmos@14 net@13 x14 net@14 vdd P L=0.022U W={wp}
+Mpmos@15 net@14 x15 net@15 vdd P L=0.022U W={wp}
+Mpmos@16 net@15 x16 y vdd P L=0.022U W={wp}
+
+Mnmos@1 y x1 gnd gnd N L=0.022U W={wn}
+Mnmos@2 y x2 gnd gnd N L=0.022U W={wn}
+Mnmos@3 y x3 gnd gnd N L=0.022U W={wn}
+Mnmos@4 y x4 gnd gnd N L=0.022U W={wn}
+Mnmos@5 y x5 gnd gnd N L=0.022U W={wn}
+Mnmos@6 y x6 gnd gnd N L=0.022U W={wn}
+Mnmos@7 y x7 gnd gnd N L=0.022U W={wn}
+Mnmos@8 y x8 gnd gnd N L=0.022U W={wn}
+Mnmos@9 y x9 gnd gnd N L=0.022U W={wn}
+Mnmos@10 y x10 gnd gnd N L=0.022U W={wn}
+Mnmos@11 y x11 gnd gnd N L=0.022U W={wn}
+Mnmos@12 y x12 gnd gnd N L=0.022U W={wn}
+Mnmos@13 y x13 gnd gnd N L=0.022U W={wn}
+Mnmos@14 y x14 gnd gnd N L=0.022U W={wn}
+Mnmos@15 y x15 gnd gnd N L=0.022U W={wn}
+Mnmos@16 y x16 gnd gnd N L=0.022U W={wn}
+.ENDS NOR16
+
+** example: XNOR16@1 net@1 net@2 net@3 net@4 net@5 net@6 net@7 net@8 net@9 net@10 net@11 net@12 net@13 net@14 net@15 net@16 XNOR16@1_y NOR16
++ PARAMS: nwidth=1 pwidth=1

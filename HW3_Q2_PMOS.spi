@@ -1,0 +1,20 @@
+*** SPICE deck for cell HW3_Q2_PMOS{sch} from library ese370
+*** Created on Thu Feb 12, 2026 14:19:12
+*** Last revised on Thu Feb 12, 2026 14:47:42
+*** Written on Fri Feb 13, 2026 01:17:57 by Electric VLSI Design System, version 9.08
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+* Model cards described in this file:
+.include C:\Users\keole\Documents\22nm_HP.pm
+
+.global gnd vdd
+
+*** TOP LEVEL CELL: HW3_Q2_PMOS{sch}
+Mpmos@0 vdd gnd gnd vdd P L=0.022U W=0.022U
+VV_Generi@0 vdd gnd DC 0.8 AC 0
+.END
+
+*** source HW3_Q2_PMOS.spi <-- open circuit in ngspice
+*** op <-- operating point analysis
+*** print vdd i(vv_generi@0) <-- not really sure what this does
+

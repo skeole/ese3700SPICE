@@ -1,0 +1,12 @@
+.SUBCKT NAND1 x1 y
++ PARAMS: nwidth=1 pwidth=1
+
+.param wn = {nwidth * 0.022u} wp = {pwidth * 0.022u}
+
+Mpmos@1 vdd x1 y vdd P L=0.022U W={wp}
+
+Mnmos@1 y x1 gnd gnd N L=0.022U W={wn}
+.ENDS NAND1
+
+** example: XNAND1@1 net@1 XNAND1@1_y NAND1
+** + PARAMS: nwidth=1 pwidth=1

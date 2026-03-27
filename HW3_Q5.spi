@@ -1,0 +1,23 @@
+*** SPICE deck for cell HW3_Q5{sch} from library ese370
+*** Created on Thu Feb 12, 2026 14:35:20
+*** Last revised on Fri Feb 13, 2026 12:15:30
+*** Written on Fri Feb 13, 2026 12:21:11 by Electric VLSI Design System, version 9.08
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+* Model cards described in this file:
+.include C:\Users\keole\Documents\22nm_HP.pm
+
+.global gnd vdd
+
+*** TOP LEVEL CELL: HW3_Q5{sch}
+Mnmos@4 net@48 net@38 gnd gnd N L=0.022U W=0.022U
+Mpmos@1 vdd net@38 net@48 vdd P L=0.022U W=0.022U
+Mpmos@2 vdd net@48 gnd vdd P L=0.022U W=0.022U
+VVPulse@1 net@38 gnd pulse (0 0.8V 50ps 10ps 10ps 250ps 500ps) DC 0V AC 0V 0
+VV_Generi@5 vdd gnd DC 0.8 AC 0
+.END
+
+*** source HW2_Q2.spi <-- open circuit in ngspice
+*** tran 1ps 1ns <-- runs the analysis for the pulse
+*** set color0 = white color1 = black color2 = red color3 = blue color4 = green <-- make the graph prettier
+*** plot net@0 net@2 net@4 <-- the input and the two measure heres

@@ -1,0 +1,96 @@
+.include C:\Users\keole\Documents\22nm_HP.pm
+
+** single-stage
+
+.SUBCKT NAND16 x1 x2 x3 x4 x5 x6 x7 x8 x9 x10 x11 x12 x13 x14 x15 x16 y
++ PARAMS: nwidth=1 pwidth=1
+
+.param wn = {nwidth * 0.022u} wp = {pwidth * 0.022u}
+
+Mpmos@1 vdd x1 y vdd P L=0.022U W={wp}
+Mpmos@2 vdd x2 y vdd P L=0.022U W={wp}
+Mpmos@3 vdd x3 y vdd P L=0.022U W={wp}
+Mpmos@4 vdd x4 y vdd P L=0.022U W={wp}
+Mpmos@5 vdd x5 y vdd P L=0.022U W={wp}
+Mpmos@6 vdd x6 y vdd P L=0.022U W={wp}
+Mpmos@7 vdd x7 y vdd P L=0.022U W={wp}
+Mpmos@8 vdd x8 y vdd P L=0.022U W={wp}
+Mpmos@9 vdd x9 y vdd P L=0.022U W={wp}
+Mpmos@10 vdd x10 y vdd P L=0.022U W={wp}
+Mpmos@11 vdd x11 y vdd P L=0.022U W={wp}
+Mpmos@12 vdd x12 y vdd P L=0.022U W={wp}
+Mpmos@13 vdd x13 y vdd P L=0.022U W={wp}
+Mpmos@14 vdd x14 y vdd P L=0.022U W={wp}
+Mpmos@15 vdd x15 y vdd P L=0.022U W={wp}
+Mpmos@16 vdd x16 y vdd P L=0.022U W={wp}
+
+Mnmos@1 y x1 net@1 gnd N L=0.022U W={wn}
+Mnmos@2 net@1 x2 net@2 gnd N L=0.022U W={wn}
+Mnmos@3 net@2 x3 net@3 gnd N L=0.022U W={wn}
+Mnmos@4 net@3 x4 net@4 gnd N L=0.022U W={wn}
+Mnmos@5 net@4 x5 net@5 gnd N L=0.022U W={wn}
+Mnmos@6 net@5 x6 net@6 gnd N L=0.022U W={wn}
+Mnmos@7 net@6 x7 net@7 gnd N L=0.022U W={wn}
+Mnmos@8 net@7 x8 net@8 gnd N L=0.022U W={wn}
+Mnmos@9 net@8 x9 net@9 gnd N L=0.022U W={wn}
+Mnmos@10 net@9 x10 net@10 gnd N L=0.022U W={wn}
+Mnmos@11 net@10 x11 net@11 gnd N L=0.022U W={wn}
+Mnmos@12 net@11 x12 net@12 gnd N L=0.022U W={wn}
+Mnmos@13 net@12 x13 net@13 gnd N L=0.022U W={wn}
+Mnmos@14 net@13 x14 net@14 gnd N L=0.022U W={wn}
+Mnmos@15 net@14 x15 net@15 gnd N L=0.022U W={wn}
+Mnmos@16 net@15 x16 gnd gnd N L=0.022U W={wn}
+.ENDS NAND16
+
+.SUBCKT NAND1 x1 y
++ PARAMS: nwidth=1 pwidth=1
+
+.param wn = {nwidth * 0.022u} wp = {pwidth * 0.022u}
+
+Mpmos@1 vdd x1 y vdd P L=0.022U W={wp}
+
+Mnmos@1 y x1 gnd gnd N L=0.022U W={wn}
+.ENDS NAND1
+
+.global gnd vdd
+
+*** TOP LEVEL CELL
+
+VV_Generi@0 vdd gnd DC 0.8 AC 0
+VVPulse@1 vin gnd pulse (0 0.8V 250ps 10ps 10ps 500ps 1000ps) DC 0V AC 0V 0
+
+XNAND1@1 vin vin1 NAND1
+XNAND1@2 gnd vin2 NAND1
+XNAND1@3 gnd vin3 NAND1
+XNAND1@4 gnd vin4 NAND1
+XNAND1@5 gnd vin5 NAND1
+XNAND1@6 gnd vin6 NAND1
+XNAND1@7 gnd vin7 NAND1
+XNAND1@8 gnd vin8 NAND1
+XNAND1@9 gnd vin9 NAND1
+XNAND1@10 gnd vin10 NAND1
+XNAND1@11 gnd vin11 NAND1
+XNAND1@12 gnd vin12 NAND1
+XNAND1@13 gnd vin13 NAND1
+XNAND1@14 gnd vin14 NAND1
+XNAND1@15 gnd vin15 NAND1
+XNAND1@16 gnd vin16 NAND1
+
+XNAND16@1 vin1 vin2 vin3 vin4 vin5 vin6 vin7 vin8 vin9 vin10 vin11 vin12 vin13 vin14 vin15 vin16 vout1 NAND16
++ PARAMS: nwidth=1 pwidth=1
+
+XNAND1@17 vout1 vout NAND1
++ PARAMS: nwidth=1 pwidth=1
+
+XNAND1@18 vout vidk NAND1
++ PARAMS: nwidth=25 pwidth=25
+
+
+.END
+
+*** source HW5_Q1a.spi <-- open circuit in ngspice
+*** tran 1ps 1200ps <-- runs the analysis for the pulse
+*** set color0 = white color1 = black color2 = red color3 = blue color4 = green <-- make the graph prettier
+*** plot vin vout <-- the input and the two measure heres
+
+*** meas tran energy integ I(vv_generi@0) from=0ps to=1200ps

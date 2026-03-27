@@ -1,0 +1,32 @@
+*** SPICE deck for cell HW2_Q1{sch} from library ese370
+*** Created on Sat Feb 07, 2026 16:44:33
+*** Last revised on Sun Feb 08, 2026 00:15:15
+*** Written on Sun Feb 08, 2026 00:17:29 by Electric VLSI Design System, version 9.08
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+* Model cards described in this file:
+.include C:\Users\keole\Documents\22nm_HP.pm
+
+*** SUBCIRCUIT ese370__NAND FROM CELL NAND{sch}
+.SUBCKT ese370__NAND a b y
+** GLOBAL gnd
+** GLOBAL vdd
+Mnmos@0 y b net@38 gnd N L=0.022U W=0.044U
+Mnmos@1 net@38 a gnd gnd N L=0.022U W=0.044U
+Mpmos@0 vdd a y vdd P L=0.022U W=0.044U
+Mpmos@1 vdd b y vdd P L=0.022U W=0.044U
+.ENDS ese370__NAND
+
+.global gnd vdd
+
+*** TOP LEVEL CELL: HW2_Q1{sch}
+XNAND@0 a b y ese370__NAND
+VV_Generi@0 vdd gnd DC 0.8 AC 0
+VV_Generi@1 a gnd DC 0.8 AC 0
+VV_Generi@2 b gnd DC 0.8 AC 0
+.END
+
+*** source HW2_Q1.spi <-- open circuit in ngspice
+*** dc vv_generi@1 0 0.8 0.01 <-- simulate DC analysis on generic source 1 (affecting net a)
+*** set color0 = white color1 = black color2 = red color3 = blue color4 = green <-- make the graph prettier
+*** plot a b y <-- input1, input2, and output

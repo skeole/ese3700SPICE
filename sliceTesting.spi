@@ -1,0 +1,240 @@
+*** SPICE deck for cell sliceTesting{sch} from library ese370
+*** Created on Wed Mar 25, 2026 21:55:32
+*** Last revised on Thu Mar 26, 2026 03:54:42
+*** Written on Thu Mar 26, 2026 03:57:16 by Electric VLSI Design System, version 9.08
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+* Model cards described in this file:
+.include C:\Users\keole\Documents\22nm_HP.pm
+
+*** SUBCIRCUIT ese370__cMOSBoring FROM CELL cMOSBoring{sch}
+.SUBCKT ese370__cMOSBoring cin cnext x y z
+** GLOBAL gnd
+** GLOBAL vdd
+Mnmos@0 cnext net@28 net@95 gnd N L=0.022U W=0.022U
+Mnmos@5 net@37 x gnd gnd N L=0.022U W=0.022U
+Mnmos@6 net@28 y gnd gnd N L=0.022U W=0.022U
+Mnmos@8 net@52 cin gnd gnd N L=0.022U W=0.022U
+Mnmos@11 net@405 cin gnd gnd N L=0.022U W=0.022U
+Mnmos@14 net@406 net@52 gnd gnd N L=0.022U W=0.022U
+Mnmos@17 net@415 net@52 gnd gnd N L=0.022U W=0.022U
+Mnmos@20 net@396 cin gnd gnd N L=0.022U W=0.022U
+Mnmos@21 net@95 net@37 gnd gnd N L=0.022U W=0.022U
+Mnmos@22 cnext net@28 net@101 gnd N L=0.022U W=0.022U
+Mnmos@23 net@101 net@52 gnd gnd N L=0.022U W=0.022U
+Mnmos@24 net@100 net@52 gnd gnd N L=0.022U W=0.022U
+Mnmos@25 cnext net@37 net@100 gnd N L=0.022U W=0.022U
+Mnmos@26 net@404 net@37 net@405 gnd N L=0.022U W=0.022U
+Mnmos@27 net@407 x net@406 gnd N L=0.022U W=0.022U
+Mnmos@28 net@414 net@37 net@415 gnd N L=0.022U W=0.022U
+Mnmos@29 net@397 x net@396 gnd N L=0.022U W=0.022U
+Mnmos@30 z y net@404 gnd N L=0.022U W=0.022U
+Mnmos@31 z y net@407 gnd N L=0.022U W=0.022U
+Mnmos@32 z net@28 net@414 gnd N L=0.022U W=0.022U
+Mnmos@33 z net@28 net@397 gnd N L=0.022U W=0.022U
+Mpmos@0 vdd net@52 net@107 vdd P L=0.022U W=0.022U
+Mpmos@1 net@130 net@37 cnext vdd P L=0.022U W=0.022U
+Mpmos@2 net@107 net@28 cnext vdd P L=0.022U W=0.022U
+Mpmos@3 net@47 net@28 cnext vdd P L=0.022U W=0.022U
+Mpmos@4 vdd net@37 net@47 vdd P L=0.022U W=0.022U
+Mpmos@5 vdd x net@37 vdd P L=0.022U W=0.022U
+Mpmos@6 vdd y net@28 vdd P L=0.022U W=0.022U
+Mpmos@7 vdd net@52 net@130 vdd P L=0.022U W=0.022U
+Mpmos@8 vdd cin net@52 vdd P L=0.022U W=0.022U
+Mpmos@11 net@399 net@28 z vdd P L=0.022U W=0.022U
+Mpmos@14 net@402 y z vdd P L=0.022U W=0.022U
+Mpmos@17 net@409 y z vdd P L=0.022U W=0.022U
+Mpmos@20 net@412 net@28 z vdd P L=0.022U W=0.022U
+Mpmos@21 net@400 x net@399 vdd P L=0.022U W=0.022U
+Mpmos@22 net@401 net@37 net@402 vdd P L=0.022U W=0.022U
+Mpmos@23 net@410 x net@409 vdd P L=0.022U W=0.022U
+Mpmos@24 net@411 net@37 net@412 vdd P L=0.022U W=0.022U
+Mpmos@25 vdd cin net@400 vdd P L=0.022U W=0.022U
+Mpmos@26 vdd cin net@401 vdd P L=0.022U W=0.022U
+Mpmos@27 vdd net@52 net@410 vdd P L=0.022U W=0.022U
+Mpmos@28 vdd net@52 net@411 vdd P L=0.022U W=0.022U
+.ENDS ese370__cMOSBoring
+
+*** SUBCIRCUIT ese370__cMOSNegated FROM CELL cMOSNegated{sch}
+.SUBCKT ese370__cMOSNegated !cin cnext x y z
+** GLOBAL gnd
+** GLOBAL vdd
+Mnmos@42 cnext net@485 net@604 gnd N L=0.022U W=0.022U
+Mnmos@43 net@488 x gnd gnd N L=0.022U W=0.022U
+Mnmos@44 net@485 y gnd gnd N L=0.022U W=0.022U
+Mnmos@45 net@495 net@561 gnd gnd N L=0.022U W=0.022U
+Mnmos@46 net@694 net@495 gnd gnd N L=0.022U W=0.022U
+Mnmos@47 net@696 net@561 gnd gnd N L=0.022U W=0.022U
+Mnmos@48 net@604 net@488 gnd gnd N L=0.022U W=0.022U
+Mnmos@49 cnext net@485 net@608 gnd N L=0.022U W=0.022U
+Mnmos@50 net@608 !cin gnd gnd N L=0.022U W=0.022U
+Mnmos@51 cnext net@488 net@608 gnd N L=0.022U W=0.022U
+Mnmos@52 net@531 net@488 net@696 gnd N L=0.022U W=0.022U
+Mnmos@53 net@532 x net@694 gnd N L=0.022U W=0.022U
+Mnmos@54 net@535 net@488 net@694 gnd N L=0.022U W=0.022U
+Mnmos@55 net@527 x net@696 gnd N L=0.022U W=0.022U
+Mnmos@56 z y net@531 gnd N L=0.022U W=0.022U
+Mnmos@57 z y net@532 gnd N L=0.022U W=0.022U
+Mnmos@58 z net@485 net@535 gnd N L=0.022U W=0.022U
+Mnmos@59 z net@485 net@527 gnd N L=0.022U W=0.022U
+Mnmos@60 net@561 !cin gnd gnd N L=0.022U W=0.022U
+Mpmos@42 vdd !cin net@616 vdd P L=0.022U W=0.022U
+Mpmos@43 net@616 net@488 cnext vdd P L=0.022U W=0.022U
+Mpmos@44 net@616 net@485 cnext vdd P L=0.022U W=0.022U
+Mpmos@45 net@571 net@485 cnext vdd P L=0.022U W=0.022U
+Mpmos@46 vdd net@488 net@571 vdd P L=0.022U W=0.022U
+Mpmos@47 vdd x net@488 vdd P L=0.022U W=0.022U
+Mpmos@48 vdd y net@485 vdd P L=0.022U W=0.022U
+Mpmos@49 vdd net@561 net@495 vdd P L=0.022U W=0.022U
+Mpmos@50 net@528 net@485 z vdd P L=0.022U W=0.022U
+Mpmos@51 net@530 y z vdd P L=0.022U W=0.022U
+Mpmos@52 net@533 y z vdd P L=0.022U W=0.022U
+Mpmos@53 net@534 net@485 z vdd P L=0.022U W=0.022U
+Mpmos@54 net@673 x net@528 vdd P L=0.022U W=0.022U
+Mpmos@55 net@673 net@488 net@530 vdd P L=0.022U W=0.022U
+Mpmos@56 net@674 x net@533 vdd P L=0.022U W=0.022U
+Mpmos@57 net@674 net@488 net@534 vdd P L=0.022U W=0.022U
+Mpmos@58 vdd net@561 net@673 vdd P L=0.022U W=0.022U
+Mpmos@59 vdd net@495 net@674 vdd P L=0.022U W=0.022U
+Mpmos@60 vdd !cin net@561 vdd P L=0.022U W=0.022U
+.ENDS ese370__cMOSNegated
+
+*** SUBCIRCUIT ese370__cMOSNegatedSized FROM CELL cMOSNegatedSized{sch}
+.SUBCKT ese370__cMOSNegatedSized !cin cnext x y z
+** GLOBAL gnd
+** GLOBAL vdd
+Mnmos@42 cnext net@491 net@604 gnd N L=0.022U W=0.176U
+Mnmos@43 net@489 x gnd gnd N L=0.022U W=0.022U
+Mnmos@44 net@491 y gnd gnd N L=0.022U W=0.022U
+Mnmos@45 net@595 net@561 gnd gnd N L=0.022U W=0.022U
+Mnmos@48 net@604 net@489 gnd gnd N L=0.022U W=0.176U
+Mnmos@49 cnext net@491 net@608 gnd N L=0.022U W=0.352U
+Mnmos@50 net@608 !cin gnd gnd N L=0.022U W=0.088U
+Mnmos@51 cnext net@489 net@608 gnd N L=0.022U W=0.352U
+Mnmos@52 net@531 net@491 gnd gnd N L=0.022U W=0.022U
+Mnmos@55 net@527 y gnd gnd N L=0.022U W=0.022U
+Mnmos@56 net@542 net@489 net@531 gnd N L=0.022U W=0.022U
+Mnmos@59 net@542 x net@527 gnd N L=0.022U W=0.022U
+Mnmos@60 net@561 !cin gnd gnd N L=0.022U W=0.022U
+Mnmos@61 net@830 net@824 net@595 gnd N L=0.022U W=0.176U
+Mnmos@62 net@830 net@542 net@561 gnd N L=0.022U W=0.176U
+Mnmos@63 net@824 net@542 gnd gnd N L=0.022U W=0.022U
+Mnmos@64 z net@830 gnd gnd N L=0.022U W=0.022U
+Mpmos@42 vdd !cin net@616 vdd P L=0.022U W=0.088U
+Mpmos@43 net@616 net@489 cnext vdd P L=0.022U W=0.352U
+Mpmos@44 net@616 net@491 cnext vdd P L=0.022U W=0.352U
+Mpmos@45 net@571 net@491 cnext vdd P L=0.022U W=0.176U
+Mpmos@46 vdd net@489 net@571 vdd P L=0.022U W=0.176U
+Mpmos@47 vdd x net@489 vdd P L=0.022U W=0.022U
+Mpmos@48 vdd y net@491 vdd P L=0.022U W=0.022U
+Mpmos@49 vdd net@561 net@595 vdd P L=0.022U W=0.022U
+Mpmos@50 net@528 x net@542 vdd P L=0.022U W=0.022U
+Mpmos@51 net@530 net@489 net@542 vdd P L=0.022U W=0.022U
+Mpmos@54 vdd net@491 net@528 vdd P L=0.022U W=0.022U
+Mpmos@55 vdd y net@530 vdd P L=0.022U W=0.022U
+Mpmos@60 vdd !cin net@561 vdd P L=0.022U W=0.022U
+Mpmos@61 vdd net@542 net@824 vdd P L=0.022U W=0.022U
+Mpmos@62 vdd net@830 z vdd P L=0.022U W=0.022U
+.ENDS ese370__cMOSNegatedSized
+
+*** SUBCIRCUIT ese370__cMOSNormal FROM CELL cMOSNormal{sch}
+.SUBCKT ese370__cMOSNormal !cnext cin x y z
+** GLOBAL gnd
+** GLOBAL vdd
+Mnmos@28 !cnext y net@479 gnd N L=0.022U W=0.022U
+Mnmos@29 net@296 x gnd gnd N L=0.022U W=0.022U
+Mnmos@30 net@288 y gnd gnd N L=0.022U W=0.022U
+Mnmos@31 net@460 net@247 gnd gnd N L=0.022U W=0.022U
+Mnmos@33 net@639 net@247 gnd gnd N L=0.022U W=0.022U
+Mnmos@35 net@649 net@460 gnd gnd N L=0.022U W=0.022U
+Mnmos@36 net@479 x gnd gnd N L=0.022U W=0.022U
+Mnmos@37 !cnext y net@484 gnd N L=0.022U W=0.022U
+Mnmos@39 net@484 cin gnd gnd N L=0.022U W=0.022U
+Mnmos@40 !cnext x net@484 gnd N L=0.022U W=0.022U
+Mnmos@41 net@366 net@296 net@649 gnd N L=0.022U W=0.022U
+Mnmos@42 net@369 x net@639 gnd N L=0.022U W=0.022U
+Mnmos@43 net@374 net@296 net@639 gnd N L=0.022U W=0.022U
+Mnmos@44 net@360 x net@649 gnd N L=0.022U W=0.022U
+Mnmos@45 z y net@366 gnd N L=0.022U W=0.022U
+Mnmos@46 z y net@369 gnd N L=0.022U W=0.022U
+Mnmos@47 z net@288 net@374 gnd N L=0.022U W=0.022U
+Mnmos@48 z net@288 net@360 gnd N L=0.022U W=0.022U
+Mnmos@49 net@247 cin gnd gnd N L=0.022U W=0.022U
+Mpmos@28 vdd cin net@494 vdd P L=0.022U W=0.022U
+Mpmos@29 net@494 x !cnext vdd P L=0.022U W=0.022U
+Mpmos@30 net@494 y !cnext vdd P L=0.022U W=0.022U
+Mpmos@31 net@419 y !cnext vdd P L=0.022U W=0.022U
+Mpmos@32 vdd x net@419 vdd P L=0.022U W=0.022U
+Mpmos@33 vdd x net@296 vdd P L=0.022U W=0.022U
+Mpmos@34 vdd y net@288 vdd P L=0.022U W=0.022U
+Mpmos@36 vdd net@247 net@460 vdd P L=0.022U W=0.022U
+Mpmos@37 net@361 net@288 z vdd P L=0.022U W=0.022U
+Mpmos@38 net@365 y z vdd P L=0.022U W=0.022U
+Mpmos@39 net@370 y z vdd P L=0.022U W=0.022U
+Mpmos@40 net@373 net@288 z vdd P L=0.022U W=0.022U
+Mpmos@41 net@606 x net@361 vdd P L=0.022U W=0.022U
+Mpmos@42 net@606 net@296 net@365 vdd P L=0.022U W=0.022U
+Mpmos@43 net@609 x net@370 vdd P L=0.022U W=0.022U
+Mpmos@44 net@609 net@296 net@373 vdd P L=0.022U W=0.022U
+Mpmos@46 vdd net@460 net@606 vdd P L=0.022U W=0.022U
+Mpmos@47 vdd net@247 net@609 vdd P L=0.022U W=0.022U
+Mpmos@49 vdd cin net@247 vdd P L=0.022U W=0.022U
+.ENDS ese370__cMOSNormal
+
+*** SUBCIRCUIT ese370__cMOSNormalSized FROM CELL cMOSNormalSized{sch}
+.SUBCKT ese370__cMOSNormalSized !cnext cin x y z
+** GLOBAL gnd
+** GLOBAL vdd
+Mnmos@28 !cnext y net@479 gnd N L=0.022U W=0.176U
+Mnmos@29 net@356 x gnd gnd N L=0.022U W=0.022U
+Mnmos@30 net@391 y gnd gnd N L=0.022U W=0.022U
+Mnmos@31 net@460 net@247 gnd gnd N L=0.022U W=0.022U
+Mnmos@36 net@479 x gnd gnd N L=0.022U W=0.176U
+Mnmos@37 !cnext y net@484 gnd N L=0.022U W=0.352U
+Mnmos@39 net@484 cin gnd gnd N L=0.022U W=0.088U
+Mnmos@40 !cnext x net@484 gnd N L=0.022U W=0.352U
+Mnmos@49 net@247 cin gnd gnd N L=0.022U W=0.022U
+Mnmos@50 net@671 net@391 gnd gnd N L=0.022U W=0.022U
+Mnmos@51 net@668 y gnd gnd N L=0.022U W=0.022U
+Mnmos@52 net@672 net@356 net@671 gnd N L=0.022U W=0.022U
+Mnmos@53 net@672 x net@668 gnd N L=0.022U W=0.022U
+Mnmos@54 net@693 net@691 net@247 gnd N L=0.022U W=0.176U
+Mnmos@55 net@693 net@672 net@460 gnd N L=0.022U W=0.176U
+Mnmos@56 net@691 net@672 gnd gnd N L=0.022U W=0.022U
+Mnmos@57 z net@693 gnd gnd N L=0.022U W=0.022U
+Mpmos@28 vdd cin net@494 vdd P L=0.022U W=0.088U
+Mpmos@29 net@494 x !cnext vdd P L=0.022U W=0.352U
+Mpmos@30 net@494 y !cnext vdd P L=0.022U W=0.352U
+Mpmos@31 net@419 y !cnext vdd P L=0.022U W=0.176U
+Mpmos@32 vdd x net@419 vdd P L=0.022U W=0.176U
+Mpmos@33 vdd x net@356 vdd P L=0.022U W=0.022U
+Mpmos@34 vdd y net@391 vdd P L=0.022U W=0.022U
+Mpmos@36 vdd net@247 net@460 vdd P L=0.022U W=0.022U
+Mpmos@49 vdd cin net@247 vdd P L=0.022U W=0.022U
+Mpmos@50 net@669 x net@672 vdd P L=0.022U W=0.022U
+Mpmos@51 net@670 net@356 net@672 vdd P L=0.022U W=0.022U
+Mpmos@52 vdd net@391 net@669 vdd P L=0.022U W=0.022U
+Mpmos@53 vdd y net@670 vdd P L=0.022U W=0.022U
+Mpmos@54 vdd net@672 net@691 vdd P L=0.022U W=0.022U
+Mpmos@55 vdd net@693 z vdd P L=0.022U W=0.022U
+.ENDS ese370__cMOSNormalSized
+
+.global gnd vdd
+
+*** TOP LEVEL CELL: sliceTesting{sch}
+VVPulse@0 net@36 gnd pulse (0 0.8V 500ms 5ms 5ms 500ms 1s) DC 0V AC 0V 0
+VVPulse@1 net@33 gnd pulse (0 0.8V 250ms 5ms 5ms 250ms 500ms) DC 0V AC 0V 0
+VVPulse@2 net@71 gnd pulse (0 0.8V 125ms 5ms 5ms 125ms 250ms) DC 0V AC 0V 0
+VV_Generi@1 vdd gnd DC 0.8 AC 0
+
+XcMOSBori@0 net@36 cnext_ac net@33 net@71 z_ac ese370__cMOSBoring
+XcMOSNega@0 net@36 cnext_s4 net@33 net@71 z_s4 ese370__cMOSNegated
+XcMOSNega@1 net@36 cnext_s4_sized net@33 net@71 z_s4_sized ese370__cMOSNegatedSized
+XcMOSNorm@0 cnext_not net@36 net@33 net@71 z_s0 ese370__cMOSNormal
+XcMOSNorm@1 cnext_not_sized net@36 net@33 net@71 z_s0_sized ese370__cMOSNormalSized
+.END
+
+*** source sliceTesting.spi <-- open circuit in ngspice
+*** tran 1ms 1000ms <-- runs the analysis for the pulse
+*** set color0 = white color1 = black color2 = maroon <-- make the graph prettier
+*** plot cnext_ac <-- the input and the two measure heres

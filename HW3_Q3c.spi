@@ -1,0 +1,24 @@
+*** SPICE deck for cell HW3_Q3c{sch} from library ese370
+*** Created on Thu Feb 12, 2026 14:26:48
+*** Last revised on Fri Feb 13, 2026 12:14:58
+*** Written on Fri Feb 13, 2026 12:21:02 by Electric VLSI Design System, version 9.08
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+* Model cards described in this file:
+.include C:\Users\keole\Documents\22nm_HP.pm
+
+.global gnd vdd
+
+*** TOP LEVEL CELL: HW3_Q3c{sch}
+Mnmos@4 vdd gate gnd gnd N L=0.022U W=0.088U
+Mnmos@5 gate vpulse gnd gnd N L=0.022U W=0.022U
+Mpmos@0 vdd vpulse gate vdd P L=0.022U W=0.022U
+VVPulse@0 vpulse gnd pulse (0 0.8V 20ps 0ps 0ps 50ps 100ps) DC 0V AC 0V 0
+VV_Generi@5 vdd gnd DC 0.8 AC 0
+.END
+
+*** source HW3_Q3c.spi <-- open circuit in ngspice
+*** tran 100fs 100ps <-- runs the analysis for the pulse
+*** set color0 = white color1 = black color2 = red color3 = blue <-- make the graph prettier
+*** plot vpulse gate <-- the input and the two measure heres
+

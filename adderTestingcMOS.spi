@@ -1,0 +1,162 @@
+*** SPICE deck for cell adderTestingcMOS{sch} from library ese370
+*** Created on Wed Mar 25, 2026 21:55:32
+*** Last revised on Fri Mar 27, 2026 02:15:26
+*** Written on Fri Mar 27, 2026 02:55:19 by Electric VLSI Design System, version 9.08
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+* Model cards described in this file:
+.include C:\Users\keole\Documents\22nm_HP.pm
+
+*** SUBCIRCUIT ese370__cMOSNegated FROM CELL cMOSNegated{sch}
+.SUBCKT ese370__cMOSNegated !cin cnext x y z
+** GLOBAL gnd
+** GLOBAL vdd
+
+Mnmos@42 cnext net@485 net@604 gnd N L=0.022U W=0.022U
+Mnmos@43 net@488 x gnd gnd N L=0.022U W=0.022U
+Mnmos@44 net@485 y gnd gnd N L=0.022U W=0.022U
+Mnmos@45 net@495 net@561 gnd gnd N L=0.022U W=0.022U
+Mnmos@46 net@694 net@495 gnd gnd N L=0.022U W=0.022U
+Mnmos@47 net@696 net@561 gnd gnd N L=0.022U W=0.022U
+Mnmos@48 net@604 net@488 gnd gnd N L=0.022U W=0.022U
+Mnmos@49 cnext net@485 net@608 gnd N L=0.022U W=0.022U
+Mnmos@50 net@608 !cin gnd gnd N L=0.022U W=0.022U
+Mnmos@51 cnext net@488 net@608 gnd N L=0.022U W=0.022U
+Mnmos@52 net@531 net@488 net@696 gnd N L=0.022U W=0.022U
+Mnmos@53 net@532 x net@694 gnd N L=0.022U W=0.022U
+Mnmos@54 net@535 net@488 net@694 gnd N L=0.022U W=0.022U
+Mnmos@55 net@527 x net@696 gnd N L=0.022U W=0.022U
+Mnmos@56 z y net@531 gnd N L=0.022U W=0.022U
+Mnmos@57 z y net@532 gnd N L=0.022U W=0.022U
+Mnmos@58 z net@485 net@535 gnd N L=0.022U W=0.022U
+Mnmos@59 z net@485 net@527 gnd N L=0.022U W=0.022U
+Mnmos@60 net@561 !cin gnd gnd N L=0.022U W=0.022U
+Mpmos@42 vdd !cin net@616 vdd P L=0.022U W=0.022U
+Mpmos@43 net@616 net@488 cnext vdd P L=0.022U W=0.022U
+Mpmos@44 net@616 net@485 cnext vdd P L=0.022U W=0.022U
+Mpmos@45 net@571 net@485 cnext vdd P L=0.022U W=0.022U
+Mpmos@46 vdd net@488 net@571 vdd P L=0.022U W=0.022U
+Mpmos@47 vdd x net@488 vdd P L=0.022U W=0.022U
+Mpmos@48 vdd y net@485 vdd P L=0.022U W=0.022U
+Mpmos@49 vdd net@561 net@495 vdd P L=0.022U W=0.022U
+Mpmos@50 net@528 net@485 z vdd P L=0.022U W=0.022U
+Mpmos@51 net@530 y z vdd P L=0.022U W=0.022U
+Mpmos@52 net@533 y z vdd P L=0.022U W=0.022U
+Mpmos@53 net@534 net@485 z vdd P L=0.022U W=0.022U
+Mpmos@54 net@673 x net@528 vdd P L=0.022U W=0.022U
+Mpmos@55 net@673 net@488 net@530 vdd P L=0.022U W=0.022U
+Mpmos@56 net@674 x net@533 vdd P L=0.022U W=0.022U
+Mpmos@57 net@674 net@488 net@534 vdd P L=0.022U W=0.022U
+Mpmos@58 vdd net@561 net@673 vdd P L=0.022U W=0.022U
+Mpmos@59 vdd net@495 net@674 vdd P L=0.022U W=0.022U
+Mpmos@60 vdd !cin net@561 vdd P L=0.022U W=0.022U
+.ENDS ese370__cMOSNegated
+
+*** SUBCIRCUIT ese370__cMOSNormal FROM CELL cMOSNormal{sch}
+.SUBCKT ese370__cMOSNormal !cnext cin x y z
+** GLOBAL gnd
+** GLOBAL vdd
+Mnmos@28 !cnext y net@479 gnd N L=0.022U W=0.022U
+Mnmos@29 net@296 x gnd gnd N L=0.022U W=0.022U
+Mnmos@30 net@288 y gnd gnd N L=0.022U W=0.022U
+Mnmos@31 net@460 net@247 gnd gnd N L=0.022U W=0.022U
+Mnmos@33 net@639 net@247 gnd gnd N L=0.022U W=0.022U
+Mnmos@35 net@649 net@460 gnd gnd N L=0.022U W=0.022U
+Mnmos@36 net@479 x gnd gnd N L=0.022U W=0.022U
+Mnmos@37 !cnext y net@484 gnd N L=0.022U W=0.022U
+Mnmos@39 net@484 cin gnd gnd N L=0.022U W=0.022U
+Mnmos@40 !cnext x net@484 gnd N L=0.022U W=0.022U
+Mnmos@41 net@366 net@296 net@649 gnd N L=0.022U W=0.022U
+Mnmos@42 net@369 x net@639 gnd N L=0.022U W=0.022U
+Mnmos@43 net@374 net@296 net@639 gnd N L=0.022U W=0.022U
+Mnmos@44 net@360 x net@649 gnd N L=0.022U W=0.022U
+Mnmos@45 z y net@366 gnd N L=0.022U W=0.022U
+Mnmos@46 z y net@369 gnd N L=0.022U W=0.022U
+Mnmos@47 z net@288 net@374 gnd N L=0.022U W=0.022U
+Mnmos@48 z net@288 net@360 gnd N L=0.022U W=0.022U
+Mnmos@49 net@247 cin gnd gnd N L=0.022U W=0.022U
+Mpmos@28 vdd cin net@494 vdd P L=0.022U W=0.022U
+Mpmos@29 net@494 x !cnext vdd P L=0.022U W=0.022U
+Mpmos@30 net@494 y !cnext vdd P L=0.022U W=0.022U
+Mpmos@31 net@419 y !cnext vdd P L=0.022U W=0.022U
+Mpmos@32 vdd x net@419 vdd P L=0.022U W=0.022U
+Mpmos@33 vdd x net@296 vdd P L=0.022U W=0.022U
+Mpmos@34 vdd y net@288 vdd P L=0.022U W=0.022U
+Mpmos@36 vdd net@247 net@460 vdd P L=0.022U W=0.022U
+Mpmos@37 net@361 net@288 z vdd P L=0.022U W=0.022U
+Mpmos@38 net@365 y z vdd P L=0.022U W=0.022U
+Mpmos@39 net@370 y z vdd P L=0.022U W=0.022U
+Mpmos@40 net@373 net@288 z vdd P L=0.022U W=0.022U
+Mpmos@41 net@606 x net@361 vdd P L=0.022U W=0.022U
+Mpmos@42 net@606 net@296 net@365 vdd P L=0.022U W=0.022U
+Mpmos@43 net@609 x net@370 vdd P L=0.022U W=0.022U
+Mpmos@44 net@609 net@296 net@373 vdd P L=0.022U W=0.022U
+Mpmos@46 vdd net@460 net@606 vdd P L=0.022U W=0.022U
+Mpmos@47 vdd net@247 net@609 vdd P L=0.022U W=0.022U
+Mpmos@49 vdd cin net@247 vdd P L=0.022U W=0.022U
+.ENDS ese370__cMOSNormal
+
+.global gnd vdd
+
+*** TOP LEVEL CELL: adderTestingcMOS{sch}
+
+*** delay
+*** VVPulse@2 x0 gnd pulse (0 0.0V 0ns 0ps 0ps 4ns 4ns) DC 0V AC 0V 0
+*** VVPulse@3 y1 gnd pulse (0 0.8V 0ns 0ps 0ps 4ns 4ns) DC 0V AC 0V 0
+*** VVPulse@4 xin gnd pulse (0 0.8V 0ns 5ps 5ps 500ps 1ns) DC 0V AC 0V 0
+
+*** switching energy - half
+*** VVPulse@2 x0 gnd pulse (0 0.8V 0ns 5ps 5ps 500ps 1ns) DC 0V AC 0V 0
+*** VVPulse@3 y1 gnd pulse (0 0.0V 0ns 5ps 5ps 500ps 1ns) DC 0V AC 0V 0
+*** VVPulse@4 xin gnd pulse (0 0.8V 0ns 5ps 5ps 500ps 1ns) DC 0V AC 0V 0
+
+*** leakage - worst
+*** VVPulse@2 x0 gnd pulse (0 0.0V 0ns 0ps 0ps 4ns 4ns) DC 0V AC 0V 0
+*** VVPulse@3 y1 gnd pulse (0 0.8V 0ns 0ps 0ps 4ns 4ns) DC 0V AC 0V 0
+*** VVPulse@4 xin gnd pulse (0 0.0V 0ns 0ps 0ps 4ns 4ns) DC 0V AC 0V 0
+
+*** leakage - best
+VVPulse@2 odds gnd pulse (0 0.0V 0ns 0ps 0ps 4ns 4ns) DC 0V AC 0V 0
+VVPulse@3 evens gnd pulse (0 0.8V 0ns 0ps 0ps 4ns 4ns) DC 0V AC 0V 0
+
+VV_Generi@1 vdd gnd DC 0.8 AC 0
+
+*** everything besides best-case leakage
+*** XcMOSNega@7 c1 c2 x0 y1 z2 ese370__cMOSNegated
+*** XcMOSNega@8 c3 c4 x0 y1 z4 ese370__cMOSNegated
+*** XcMOSNega@9 c5 c6 x0 y1 z6 ese370__cMOSNegated
+*** XcMOSNega@10 c7 clast x0 y1 zlast ese370__cMOSNegated
+*** XcMOSNega@11 net@310 net@309 gnd gnd cMOSNega@11_z ese370__cMOSNegated
+*** XcMOSNorm@5 c1 net@309 xin y1 z1 ese370__cMOSNormal
+*** XcMOSNorm@6 c3 c2 x0 y1 z3 ese370__cMOSNormal
+*** XcMOSNorm@7 c5 c4 x0 y1 z5 ese370__cMOSNormal
+*** XcMOSNorm@8 c7 c6 x0 y1 z7 ese370__cMOSNormal
+*** XcMOSNorm@9 cMOSNorm@9_!cnext clast gnd gnd cMOSNorm@9_z ese370__cMOSNormal
+*** XcMOSNorm@10 net@310 gnd gnd gnd cMOSNorm@10_z ese370__cMOSNormal
+
+XcMOSNega@7 c1 c2 evens evens z2 ese370__cMOSNegated
+XcMOSNega@8 c3 c4 evens evens z4 ese370__cMOSNegated
+XcMOSNega@9 c5 c6 evens evens z6 ese370__cMOSNegated
+XcMOSNega@10 c7 clast evens evens zlast ese370__cMOSNegated
+XcMOSNega@11 net@310 net@309 gnd gnd cMOSNega@11_z ese370__cMOSNegated
+XcMOSNorm@5 c1 net@309 odds odds z1 ese370__cMOSNormal
+XcMOSNorm@6 c3 c2 odds odds z3 ese370__cMOSNormal
+XcMOSNorm@7 c5 c4 odds odds z5 ese370__cMOSNormal
+XcMOSNorm@8 c7 c6 odds odds z7 ese370__cMOSNormal
+XcMOSNorm@9 cMOSNorm@9_!cnext clast gnd gnd cMOSNorm@9_z ese370__cMOSNormal
+XcMOSNorm@10 net@310 gnd gnd gnd cMOSNorm@10_z ese370__cMOSNormal
+.END
+
+*** source adderTestingcMOS.spi <-- open circuit in ngspice
+*** tran 1ps 2ns <-- runs the analysis for the pulse
+*** set color0 = white color1 = black color2 = red color3 = blue <-- make the graph prettier
+
+*** plot xin y1 x0 <-- input1, input2, and output
+
+*** plot xin c1 c2 c3 c4 c5 c6 c7 clast
+*** plot xin zlast <-- input1, input2, and output
+
+*** meas tran energy INTEG i(vv_generi@1) FROM=500p TO=1000p
+*** meas tran energy INTEG i(vv_generi@1) FROM=1000p TO=1500p
+
+*** meas tran energy INTEG i(vv_generi@1) FROM=500p TO=666.901p

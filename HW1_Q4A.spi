@@ -1,0 +1,19 @@
+*** SPICE deck for cell HW1_Q4A{sch} from library ese370
+*** Created on Fri Jan 30, 2026 00:31:41
+*** Last revised on Sun Feb 08, 2026 00:14:18
+*** Written on Wed Mar 04, 2026 11:22:55 by Electric VLSI Design System, version 9.08
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+* Model cards described in this file:
+.include C:\Users\keole\Documents\22nm_HP.pm
+
+.global gnd vdd
+
+*** TOP LEVEL CELL: HW1_Q4A{sch}
+Mnmos@0 y net@30 gnd gnd N L=0.044U W=0.044U
+Mnmos@1 y b gnd gnd N L=0.044U W=0.044U
+Mnmos@2 y a gnd gnd N L=0.044U W=0.044U
+Mpmos@0 vdd a net@1 vdd P L=0.022U W=0.044U
+Mpmos@1 net@1 b net@22 vdd P L=0.022U W=0.044U
+Mpmos@2 net@22 c y vdd P L=0.044U W=0.044U
+.END
